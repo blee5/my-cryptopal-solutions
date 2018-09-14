@@ -6,35 +6,37 @@ def xor(b1, b2):
         b[i] = b1[i] ^ b2[i]
     return b
 
+# source: https://gist.github.com/mikeecb/0d75f46521fe526a0138ae5265392505
+# TODO: store frequencies in a file and read it instead of this mess
 def score_text(s):
     freq = {}
-    freq[' '] = 5.700000000
-    freq['e'] = 5.390395169
-    freq['t'] = 5.282039486
-    freq['a'] = 5.248362256
-    freq['o'] = 5.235661502
-    freq['i'] = 5.214822972
-    freq['n'] = 5.214319386
-    freq['s'] = 5.196844692
-    freq['h'] = 5.193607737
-    freq['r'] = 5.184990759
-    freq['d'] = 5.134044565
-    freq['l'] = 5.125951672
-    freq['u'] = 5.88219598
-    freq['c'] = 5.79962026
-    freq['m'] = 5.79502870
-    freq['f'] = 5.72967175
-    freq['w'] = 5.69069021
-    freq['g'] = 5.61549736
-    freq['y'] = 5.59010696
-    freq['p'] = 5.55746578
-    freq['b'] = 5.47673928
-    freq['v'] = 5.30476191
-    freq['k'] = 5.22969448
-    freq['x'] = 5.5574077
-    freq['j'] = 5.4507165
-    freq['q'] = 5.3649838
-    freq['z'] = 5.2456495
+    freq[' '] = 700000000
+    freq['e'] = 390395169
+    freq['t'] = 282039486
+    freq['a'] = 248362256
+    freq['o'] = 235661502
+    freq['i'] = 214822972
+    freq['n'] = 214319386
+    freq['s'] = 196844692
+    freq['h'] = 193607737
+    freq['r'] = 184990759
+    freq['d'] = 134044565
+    freq['l'] = 125951672
+    freq['u'] = 88219598
+    freq['c'] = 79962026
+    freq['m'] = 79502870
+    freq['f'] = 72967175
+    freq['w'] = 69069021
+    freq['g'] = 61549736
+    freq['y'] = 59010696
+    freq['p'] = 55746578
+    freq['b'] = 47673928
+    freq['v'] = 30476191
+    freq['k'] = 22969448
+    freq['x'] = 5574077
+    freq['j'] = 4507165
+    freq['q'] = 3649838
+    freq['z'] = 2456495
     score = 0
     for c in s.lower():
         if c in freq:
